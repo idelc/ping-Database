@@ -1,3 +1,10 @@
+COPY DEPARTMENTS(
+    dept_ID,
+    dept_Name
+)
+FROM 'DEPARTMENTS.csv'
+DELIMITER ',' CSV HEADER;
+
 COPY EMPLOYEE(
     emp_ID,
     emp_Pass,
@@ -32,13 +39,6 @@ COPY POST(
     rating
 )
 FROM 'POSTS.csv'
-DELIMITER ',' CSV HEADER;
-
-COPY DEPARTMENTS(
-    dept_ID,
-    dept_Name
-)
-FROM 'DEPARTMENTS.csv'
 DELIMITER ',' CSV HEADER;
 
 COPY MNGMT(
