@@ -415,7 +415,7 @@ public class PingDatabase {
 
     public static void displayProf(PingDatabase esql, String fName){
         try{
-           String query = String.format("SELECT E.emp_ID, E.empEmail, D.dept_Name, E.name FROM EMPLOYEE E, DEPARTMENTS D WHERE E.emp_ID = '%s', D.dept_ID = E.works_In", fName);
+           String query = String.format("SELECT E.emp_ID, E.empEmail, D.dept_Name, E.name FROM EMPLOYEE E, DEPARTMENTS D WHERE E.emp_ID = '%s' AND D.dept_ID = E.works_In", fName);
            System.out.print("\n");
            esql.executeQueryAndPrintResult(query);
            return;
