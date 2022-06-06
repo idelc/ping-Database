@@ -286,7 +286,7 @@ public class PingDatabase {
                         System.out.println("9. Log out");
                         switch (readChoice()) {
                             case 1:
-                                // displayProf(esql, authorisedUser);
+                                displayProf(esql, authorisedUser);
                                 break;
                             case 2:
                                 // UpdateProfile(esql, authorisedUser);
