@@ -10,8 +10,7 @@ CREATE TABLE EMPLOYEE(
     works_In integer NOT NULL,
     name char(50),
     dob date,
-    compTeam varchar(20),
-    hireDate varchar(20),
+    hireDate date,
     PRIMARY KEY(emp_ID),
     FOREIGN KEY(works_In) REFERENCES DEPARTMENTS(dept_ID)
 );
@@ -39,7 +38,7 @@ CREATE TABLE POST(
     rating integer NOT NULL,
     PRIMARY KEY(post_ID),
     FOREIGN KEY(author) REFERENCES EMPLOYEE(emp_ID),
-    FOREIGN KEY(board) REFERENCES DEPARTMENTS(dept_ID)
+    FOREIGN KEY(board) REFERENCES EMPLOYEE(works_In)
 );
 
 CREATE TABLE DEPARTMENTS(
