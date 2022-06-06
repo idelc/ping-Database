@@ -36,8 +36,14 @@ DELIMITER ',' CSV HEADER;
 
 COPY DEPARTMENTS(
     dept_ID,
-    dept_Name,
-    dept_Mngmt
+    dept_Name
 )
 FROM 'DEPARTMENTS.csv'
+DELIMITER ',' CSV HEADER;
+
+COPY MNGMT(
+    dept,
+    mngr
+)
+FROM 'MNGMT.csv'
 DELIMITER ',' CSV HEADER;

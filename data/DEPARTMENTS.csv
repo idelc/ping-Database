@@ -1,6 +1,6 @@
-dept_ID,dept_Name,dept_Mngmt
-1,Research and Development,ggerbel3
-2,Human Resources,ekilcoyne9
-3,Sales,vnewcomb5
-4,Engineering,tcargenf
-5,Accounting,ssings8
+dept_ID,dept_Name
+1,Research and Development
+2,Human Resources
+3,Sales
+4,Engineering
+5,Accounting
