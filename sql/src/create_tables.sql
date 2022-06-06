@@ -27,18 +27,6 @@ CREATE TABLE MSG(
     FOREIGN KEY(recv_ID) REFERENCES EMPLOYEE(emp_ID)
 );
 
-CREATE TABLE POST(
-    post_ID integer UNIQUE NOT NULL,
-    content char(500) NOT NULL,
-    isAnnou boolean NOT NULL,
-    author varchar(30) NOT NULL,
-    board integer NOT NULL,
-    rating integer NOT NULL,
-    PRIMARY KEY(post_ID),
-    FOREIGN KEY(author) REFERENCES EMPLOYEE(emp_ID),
-    FOREIGN KEY(board) REFERENCES EMPLOYEE(works_In)
-);
-
 CREATE TABLE DEPARTMENTS(
     dept_ID integer UNIQUE NOT NULL,
     dept_Name char(50) NOT NULL,
@@ -52,3 +40,15 @@ ADD COLUMN works_In integer NOT NULL;
 
 ALTER EMPLOYEE
 ADD FOREIGN KEY(works_In) REFERENCES DEPARTMENTS(dept_ID);
+
+CREATE TABLE POST(
+    post_ID integer UNIQUE NOT NULL,
+    content char(500) NOT NULL,
+    isAnnou boolean NOT NULL,
+    author varchar(30) NOT NULL,
+    board integer NOT NULL,
+    rating integer NOT NULL,
+    PRIMARY KEY(post_ID),
+    FOREIGN KEY(author) REFERENCES EMPLOYEE(emp_ID),
+    FOREIGN KEY(board) REFERENCES EMPLOYEE(works_In)
+);
