@@ -412,4 +412,16 @@ public class PingDatabase {
             return null;
         }
     }// end
+
+    public static void displayProf(PingDatabase esql, String fName){
+        try{
+           String query = String.format("SELECT E.emp_ID, E.empEmail, D.dept_Name, E.name FROM EMPLOYEE E, DEPARTMENTS D WHERE E.emp_ID = '%s', D.dept_ID = E.works_In", fName);
+           System.out.print("\n");
+           esql.executeQueryAndPrintResult(query);
+           return;
+        }catch(Exception e){
+           System.err.println (e.getMessage ());
+           return;
+        }
+     }//end
 }
